@@ -1,0 +1,164 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Gold and Purple luxury color palette */
+  --background: oklch(0.98 0.01 60); /* Warm off-white with gold undertone */
+  --foreground: oklch(0.2 0.05 280); /* Deep purple for primary text */
+  --card: oklch(0.96 0.02 60); /* Light gold-tinted card background */
+  --card-foreground: oklch(0.2 0.05 280); /* Deep purple text on cards */
+  --popover: oklch(0.98 0.01 60); /* Warm white popover background */
+  --popover-foreground: oklch(0.2 0.05 280); /* Deep purple text in popovers */
+  --primary: oklch(0.65 0.2 280); /* Rich purple for primary actions */
+  --primary-foreground: oklch(0.98 0.01 60); /* Warm white text on primary buttons */
+  --secondary: oklch(0.75 0.15 60); /* Rich gold for secondary elements */
+  --secondary-foreground: oklch(0.2 0.05 280); /* Deep purple text on gold backgrounds */
+  --muted: oklch(0.85 0.05 60); /* Muted gold for less prominent elements */
+  --muted-foreground: oklch(0.4 0.05 280); /* Medium purple for muted text */
+  --accent: oklch(0.75 0.15 60); /* Gold accent for highlights */
+  --accent-foreground: oklch(0.2 0.05 280); /* Deep purple text for accent elements */
+  --destructive: oklch(0.55 0.22 25); /* Red for error messages */
+  --destructive-foreground: oklch(1 0 0); /* White text for destructive actions */
+  --border: oklch(0.88 0.05 60); /* Light gold border */
+  --input: oklch(0.96 0.02 60); /* Light gold input field background */
+  --ring: oklch(0.65 0.2 280 / 0.5); /* Purple ring for focused elements */
+  --chart-1: oklch(0.65 0.2 280); /* Purple chart color */
+  --chart-2: oklch(0.75 0.15 60); /* Gold chart color */
+  --chart-3: oklch(0.55 0.22 25); /* Red indicator */
+  --chart-4: oklch(0.45 0.1 280); /* Medium purple chart color */
+  --chart-5: oklch(0.85 0.12 45); /* Light gold highlight color */
+  --radius: 0.5rem; /* Slightly rounded corners for luxury feel */
+  --sidebar: oklch(0.94 0.03 60); /* Light gold sidebar background */
+  --sidebar-foreground: oklch(0.2 0.05 280); /* Deep purple sidebar text */
+  --sidebar-primary: oklch(0.65 0.2 280); /* Purple primary sidebar background */
+  --sidebar-primary-foreground: oklch(0.98 0.01 60); /* Warm white primary sidebar text */
+  --sidebar-accent: oklch(0.75 0.15 60); /* Gold sidebar accent */
+  --sidebar-accent-foreground: oklch(0.2 0.05 280); /* Deep purple text for sidebar accents */
+  --sidebar-border: oklch(0.88 0.05 60); /* Light gold border for sidebar */
+  --sidebar-ring: oklch(0.65 0.2 280 / 0.5); /* Purple ring for sidebar focused elements */
+}
+
+.dark {
+  --background: oklch(0.12 0.02 280); /* Dark purple background */
+  --foreground: oklch(0.92 0.03 60); /* Light gold text */
+  --card: oklch(0.18 0.03 280); /* Dark purple card background */
+  --card-foreground: oklch(0.92 0.03 60); /* Light gold text on cards */
+  --popover: oklch(0.12 0.02 280); /* Dark purple popover background */
+  --popover-foreground: oklch(0.92 0.03 60); /* Light gold text in popovers */
+  --primary: oklch(0.75 0.15 60); /* Gold primary for dark mode */
+  --primary-foreground: oklch(0.12 0.02 280); /* Dark purple text on primary buttons */
+  --secondary: oklch(0.25 0.05 280); /* Dark purple secondary background */
+  --secondary-foreground: oklch(0.92 0.03 60); /* Light gold text on secondary */
+  --muted: oklch(0.25 0.03 280); /* Dark purple muted background */
+  --muted-foreground: oklch(0.7 0.05 60); /* Muted gold text */
+  --accent: oklch(0.75 0.15 60); /* Gold accent maintained */
+  --accent-foreground: oklch(0.12 0.02 280); /* Dark purple text for accent */
+  --destructive: oklch(0.5 0.2 25); /* Darker red for dark mode */
+  --destructive-foreground: oklch(0.9 0.1 25); /* Light red text */
+  --border: oklch(0.25 0.03 280); /* Dark purple border */
+  --input: oklch(0.25 0.03 280); /* Dark purple input background */
+  --ring: oklch(0.75 0.15 60 / 0.5); /* Gold ring for dark mode */
+  --chart-1: oklch(0.75 0.15 60); /* Gold chart color */
+  --chart-2: oklch(0.65 0.2 280); /* Purple chart color */
+  --chart-3: oklch(0.75 0.15 60); /* Gold chart color */
+  --chart-4: oklch(0.6 0.2 320); /* Pink chart color */
+  --chart-5: oklch(0.65 0.2 15); /* Orange chart color */
+  --sidebar: oklch(0.18 0.03 280); /* Dark purple sidebar */
+  --sidebar-foreground: oklch(0.92 0.03 60); /* Light gold sidebar text */
+  --sidebar-primary: oklch(0.75 0.15 60); /* Gold primary sidebar */
+  --sidebar-primary-foreground: oklch(0.12 0.02 280); /* Dark purple primary sidebar text */
+  --sidebar-accent: oklch(0.25 0.03 280); /* Dark purple sidebar accent */
+  --sidebar-accent-foreground: oklch(0.92 0.03 60); /* Light gold sidebar accent text */
+  --sidebar-border: oklch(0.25 0.03 280); /* Dark purple sidebar border */
+  --sidebar-ring: oklch(0.75 0.15 60 / 0.5); /* Gold sidebar ring */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Luxury font families for gold/purple theme */
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Source Sans Pro", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* Cursor pointer for all interactive elements */
+  button,
+  [role="button"],
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  a,
+  label,
+  select,
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  /* Ensure dropdown menu items have pointer cursor */
+  [role="menuitem"],
+  [role="option"],
+  [data-radix-collection-item],
+  [data-radix-dropdown-menu-item],
+  [data-radix-select-item],
+  [data-radix-dialog-trigger] {
+    cursor: pointer;
+  }
+  
+  /* Card hover states should show pointer when clickable */
+  .cursor-pointer:hover,
+  [role="button"]:hover,
+  button:hover:not(:disabled) {
+    cursor: pointer;
+  }
+  
+  /* Disabled elements should show not-allowed cursor */
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
