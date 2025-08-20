@@ -1,37 +1,37 @@
-# 🧞‍♂️ LegalGenie V4
+# LegalGenie V4
 
 An AI-powered legal document generator with intelligent chat assistant, built with Next.js 15, React 19, and cutting-edge AI technology.
 
-## ✨ Features
+## Features
 
-### 🤖 AI Document Generation
+### AI Document Generation
 - **Smart Legal Documents**: Generate contracts, agreements, and legal documents using Google Gemini AI
 - **Customizable Templates**: Tailored prompts for different legal document types
 - **Instant Generation**: Fast AI-powered document creation with professional formatting
 
-### 💬 Legal Chat Assistant  
+### Legal Chat Assistant  
 - **Real-time AI Consultation**: Ask legal questions and get instant AI-powered responses
 - **Context-aware Conversations**: Maintains conversation history for better assistance
 - **Session Management**: Organized chat sessions for different legal topics
 
-### 📁 Document Management
+### Document Management
 - **Folder Organization**: Create and manage folders to organize your documents
 - **Document Library**: View, edit, and manage all your generated documents
 - **Smart Filtering**: Filter by document type, status, favorites, and search content
 - **Export Options**: Download documents as PDF or TXT files
 
-### 🔐 User Authentication
+### User Authentication
 - **Secure Login**: Supabase authentication with email verification
 - **User Profiles**: Personal document libraries and chat history
 - **Session Management**: Persistent login across browser sessions
 
-### 🎨 Beautiful UI/UX
+### Beautiful UI/UX
 - **Modern Design**: Clean, professional interface using Radix UI + Tailwind CSS
 - **Responsive Layout**: Works perfectly on desktop, tablet, and mobile
 - **Dark/Light Theme**: Adaptive theme support
 - **Smooth Animations**: Polished user experience with micro-interactions
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js 15** - React framework with App Router
@@ -51,7 +51,7 @@ An AI-powered legal document generator with intelligent chat assistant, built wi
 - **Row Level Security** - Secure data isolation
 - **Real-time subscriptions** - Live data updates
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ 
@@ -99,7 +99,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-## 📊 Database Schema
+## Database Schema
 
 ### Core Tables
 - **profiles** - User profile information
@@ -113,7 +113,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 - User data isolation through policies
 - Secure API key management
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Documents
 - `GET /api/documents` - Fetch user documents
@@ -131,7 +131,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 - `POST /api/chat/message` - Send chat message
 - `POST /api/chat/sessions` - Create chat session
 
-## 🎯 Key Features in Detail
+## Key Features in Detail
 
 ### Document Generation
 - Intelligent prompt engineering for legal documents
@@ -151,7 +151,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 - Session-based chat history
 - Real-time response streaming
 
-## 🔒 Security Features
+## Security Features
 
 - **Environment Variable Protection** - Sensitive keys properly secured
 - **Row Level Security** - Database-level access control
@@ -159,14 +159,14 @@ Open [http://localhost:3000](http://localhost:3000) to see the application.
 - **Input Validation** - Sanitized user inputs
 - **HTTPS Only** - Secure communication
 
-## 📱 Responsive Design
+## Responsive Design
 
 - **Mobile-First** - Optimized for all screen sizes
 - **Touch-Friendly** - Mobile gesture support
 - **Fast Loading** - Optimized bundle sizes
 - **Offline Support** - Service worker for offline functionality
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 1. Connect your GitHub repository to Vercel
@@ -179,7 +179,7 @@ npm run build
 npm start
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -187,17 +187,17 @@ npm start
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Harsith Thokala**
 - GitHub: [@Harsith-Thokala](https://github.com/Harsith-Thokala)
 - LinkedIn: [Connect with me](https://linkedin.com/in/harsith-thokala)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Google Gemini AI** for powerful document generation
 - **Supabase** for seamless backend infrastructure
@@ -205,7 +205,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Radix UI** for accessible component primitives
 - **Tailwind CSS** for beautiful styling system
 
-## 📊 Project Stats
+## Project Stats
 
 - **93+ Files** - Comprehensive codebase
 - **14,866+ Lines** - Extensive functionality
@@ -215,8 +215,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-⭐ **Star this repository if you find it helpful!**
+**Star this repository if you find it helpful!**
 
-🐛 **Found a bug? Please open an issue.**
+**Found a bug? Please open an issue.**
 
-💡 **Have a feature request? Let's discuss it!**
+**Have a feature request? Let's discuss it!**
