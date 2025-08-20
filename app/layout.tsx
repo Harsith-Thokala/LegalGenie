@@ -19,9 +19,81 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "LegalGenie - AI-Powered Legal Document Drafting",
-  description: "Professional legal document generation powered by AI",
-    generator: 'v0.app'
+  title: "LegalGenie V4 - AI-Powered Legal Document Generator",
+  description: "Generate professional legal documents instantly with AI. Create contracts, agreements, and legal forms using advanced AI technology. Includes legal chat assistant and document management.",
+  keywords: [
+    "AI legal documents",
+    "legal document generator", 
+    "contract generator",
+    "legal AI assistant",
+    "document automation",
+    "legal tech",
+    "AI contracts",
+    "legal forms",
+    "document drafting",
+    "legal technology"
+  ],
+  authors: [{ name: "Harsith Thokala" }],
+  creator: "Harsith Thokala",
+  publisher: "LegalGenie",
+  robots: "index, follow",
+  metadataBase: new URL('https://legal-genie-five.vercel.app'),
+  
+  // Open Graph (OGP) for social media
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://legal-genie-five.vercel.app',
+    title: 'LegalGenie V4 - AI-Powered Legal Document Generator',
+    description: 'Generate professional legal documents instantly with AI. Create contracts, agreements, and legal forms using advanced AI technology.',
+    siteName: 'LegalGenie V4',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'LegalGenie V4 - AI Legal Document Generator',
+      }
+    ],
+  },
+
+  // Twitter Card
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LegalGenie V4 - AI-Powered Legal Document Generator',
+    description: 'Generate professional legal documents instantly with AI. Create contracts, agreements, and legal forms using advanced AI technology.',
+    images: ['/og-image.png'],
+    creator: '@HarsithThokala',
+  },
+
+  // Additional SEO
+  category: 'Legal Technology',
+  classification: 'AI Legal Document Generator',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#8B5CF6' },
+    { media: '(prefers-color-scheme: dark)', color: '#A855F7' },
+  ],
+
+  // App-specific
+  applicationName: 'LegalGenie V4',
+  generator: 'Next.js 15',
+  
+  // Verification (add these if you have them)
+  // verification: {
+  //   google: 'your-google-verification-code',
+  //   yandex: 'your-yandex-verification-code',
+  //   yahoo: 'your-yahoo-verification-code',
+  // },
+
+  // Alternate languages (if you add i18n later)
+  // alternates: {
+  //   canonical: 'https://legal-genie-five.vercel.app',
+  //   languages: {
+  //     'en-US': 'https://legal-genie-five.vercel.app',
+  //   },
+  // },
 }
 
 export default function RootLayout({
@@ -31,6 +103,42 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable} antialiased`}>
+      <head>
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "LegalGenie V4",
+              "description": "AI-powered legal document generator with chat assistant",
+              "url": "https://legal-genie-five.vercel.app",
+              "applicationCategory": "LegalTech",
+              "operatingSystem": "Any",
+              "author": {
+                "@type": "Person",
+                "name": "Harsith Thokala",
+                "url": "https://github.com/Harsith-Thokala"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "AI Document Generation",
+                "Legal Chat Assistant", 
+                "Document Management",
+                "Folder Organization",
+                "User Authentication",
+                "PDF/TXT Export"
+              ],
+              "screenshot": "https://legal-genie-five.vercel.app/og-image.png"
+            })
+          }}
+        />
+      </head>
       <body>
         <AuthProvider>
           <DocumentProvider>
